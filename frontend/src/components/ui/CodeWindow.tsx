@@ -28,7 +28,9 @@ export function CodeWindow({ title, children, delay = 0 }: CodeWindowProps) {
                     </div>
                     {/* content (children) */}
                     <div className="p-6 font-mono text-sm leading-relaxed text-slate-300">
-                    {children}
+                        <div className="space-y-2">
+                            {children}
+                        </div>
                     </div>
                 </div>
             </motion.div>
