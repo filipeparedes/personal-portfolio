@@ -1,8 +1,4 @@
 import { use, useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
 import { getAboutData } from './services/api'
 
 function App() {
@@ -20,7 +16,7 @@ function App() {
           <p>{data.description}</p>
         </div>
       ) : (
-        <p>Loading...</p>
+        <p className="text-gray-500 font-bold">Loading...</p>
       )}
     </div>
   )
