@@ -8,10 +8,9 @@ import { BackgroundAnimation } from "./ui/BackgroundAnimation";
 export function Intro() {
     return (
         <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-slate-950">
+            <BackgroundAnimation></BackgroundAnimation>
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
-                <BackgroundAnimation></BackgroundAnimation>
-
                 {/* left side code window */}
                 <CodeWindow title="~/portfolio/intro.tsx">
                 <div><C type="keyword">const</C> <C type="var">developer</C><C type="punct"> {`= {`} </C></div>
