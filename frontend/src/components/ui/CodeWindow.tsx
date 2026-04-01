@@ -4,17 +4,18 @@ import { motion } from "framer-motion";
 interface CodeWindowProps {
     title: string;
     children: ReactNode;
+    bgcolor?: string;
     delay?: number; //optional delay for animation
 }
 
-export function CodeWindow({ title, children, delay = 0 }: CodeWindowProps) {
+export function CodeWindow({ title, children, delay = 0, bgcolor="bg-slate-900/50" }: CodeWindowProps) {
     return (
         <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay }}
         >
-            <div className="bg-slate-900/50 backdrop-blur-sm rounded-lg border border-slate-800 overflow-hidden shadow-2xl">
+            <div className={`${bgcolor} backdrop-blur-sm rounded-lg border border-slate-800 overflow-hidden shadow-2xl`}>
                 {/* header  */}
                 <div className="bg-slate-800/80 px-4 py-2 flex items-center gap-2 border-b border-slate-700">
                     <div className="flex gap-1.5">
