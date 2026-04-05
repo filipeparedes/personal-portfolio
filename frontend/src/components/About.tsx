@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { CodeRow as C } from "./ui/CodeRow";
 import { Photo } from "./ui/Photo";
-import { ChevronRight } from "lucide-react";
 import { Trait } from "./ui/Trait";
 import { CodeWindow } from "./ui/CodeWindow";
 import { SkillBar } from "./ui/SkillBar";
