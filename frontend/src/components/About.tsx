@@ -21,7 +21,7 @@ export function About() {
     ];
 
     return (
-    <section className="bg-slate-900 py-24">
+    <section className="bg-slate-950 py-24">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ export function About() {
                             </div>
                         </motion.div>
                         {/*Right - Skills*/}
-                        <CodeWindow title="~/skills.json" bgcolor="bg-slate-950">
+                        <CodeWindow title="~/skills.json">
                             <div className="space-y-4">
                                 {skills.map((skill, index) => (
                                     <SkillBar 
