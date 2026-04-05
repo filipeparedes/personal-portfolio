@@ -4,10 +4,10 @@ import { CodeWindow } from "./CodeWindow";
 import { CodeRow as C } from "./CodeRow";
 
 const socials = [
-  { name: "GitHub", icon: <ExternalLink size={14} />, handle: "@teu-user", url: "https://github.com", color: "text-slate-400" },
-  { name: "LinkedIn", icon: <ExternalLink size={14} />, handle: "/in/teu-user", url: "https://linkedin.com", color: "text-blue-400" },
-  { name: "Itch", icon: <ExternalLink size={14} />, handle: "teu-user.itch.io", url: "https://itch.io", color: "text-pink-400" },
-  { name: "Email", icon: <Mail size={14} />, handle: "teuemail@email.com", url: "mailto:email@email.com", color: "text-purple-400" },
+  { name: "GitHub", icon: <ExternalLink size={14} />, handle: "@filipeparedes", url: "https://github.com", color: "text-slate-400" },
+  { name: "LinkedIn", icon: <ExternalLink size={14} />, handle: "/in/filipe-paredes/", url: "https://linkedin.com", color: "text-blue-400" },
+  { name: "Itch", icon: <ExternalLink size={14} />, handle: "filipeparedes.itch.io", url: "https://itch.io", color: "text-pink-400" },
+  { name: "Email", icon: <Mail size={14} />, handle: "filipeparedes3@gmail.com", url: "mailto:filipeparedes3@gmail.com", color: "text-purple-400" },
 ];
 
 export function SocialLinks() {
@@ -20,7 +20,7 @@ export function SocialLinks() {
     >
       <CodeWindow title="~/social-links.js">
         <div className="space-y-4 font-mono text-sm">
-          <div className="text-slate-600 italic">// Encontra-me online</div>
+          <div className="text-slate-600 italic">// Find me online</div>
           
           {socials.map((social, i) => (
             <div key={social.name} className="flex gap-3 items-start group">
@@ -44,7 +44,7 @@ export function SocialLinks() {
           ))}
 
           <div className="pt-4 border-t border-slate-800/50 text-slate-600 italic">
-            // Respondo em ~24h 📬
+            // I'll answer in ~24h 📬
           </div>
         </div>
       </CodeWindow>
