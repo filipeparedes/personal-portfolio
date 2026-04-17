@@ -1,11 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { SocialLinks } from "./ui/SocialLinks";
 import { Send } from "lucide-react";
 import { CodeRow as C} from "./ui/CodeRow";
+import { ContactModal } from "./ui/ContactModal";  
 
 export function Contact() {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <section className="py-32 bg-slate-950 relative">
       <div className="container mx-auto px-6">
@@ -54,17 +58,19 @@ export function Contact() {
                 <span>Lorem ipsum</span>
               </div>
             </div>
-            <a
-              href="mailto:filipeparedes3@gmail.com"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-purple-600 text-white rounded border border-purple-500/50 hover:bg-purple-700 transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] font-mono group"
+            <button
+              onClick={() => setModalOpen(true)}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-purple-600 text-white rounded border border-purple-500/50 hover:bg-purple-700 transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] font-mono group cursor-pointer"
             >
-              Enviar Mensagem
+              Send Message
               <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </a>
+            </button>
           </motion.div>
           <SocialLinks />
         </div>
       </div>
+
+      <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />  {/* 👈 faltava isto */}
     </section>
   );
 }
