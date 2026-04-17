@@ -5,18 +5,22 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { ProjectCard } from "./ui/ProjectCard";
 import { CodeRow as C} from "./ui/CodeRow";
+import { getProjectsData } from "../services/api"
 
-const projects = [
-  { title: "Portfolio Website", description: "Modern portfolio with React.", image: "https://images.unsplash.com/photo-1676573781764-8169fa877f97", tags: ["React", "Tailwind"], github: "#", demo: "#" },
-  { title: "Task Manager", description: "Fullstack task app.", image: "https://images.unsplash.com/photo-1719400471588-575b23e27bd7", tags: ["Next.js", "Prisma"], github: "#", demo: "#" },
-  { title: "Indie Game", description: "2D platformer project.", image: "https://images.unsplash.com/photo-1559571239-79ad463fde14", tags: ["Unity", "C#"], github: "#", demo: "#" },
-  { title: "E-commerce", description: "Shop with Stripe.", image: "https://images.unsplash.com/photo-1557821552-17105176677c", tags: ["Node.js"], github: "#", demo: "#" },
-  { title: "Social Dashboard", description: "Analytics platform.", image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f", tags: ["React"], github: "#", demo: "#" },
-];
 
 const PER_PAGE = 3;
 
 export function Projects() {
+  const [projects, setProjects] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    getProjectsData()
+        .then(data => setProjects(data))
+        .catch(err => console.error("Error fetching projects:", err))
+        .finally(() => setLoading(false));
+  }, []);
+
   // Create a loop array by cloning the last items to the start and first items to the end
   const allItems = [
     ...projects.slice(-PER_PAGE),

@@ -9,7 +9,6 @@ router.get('/skills', async (req, res) => {
     const skills = await prisma.skill.findMany();
     res.json(skills);
   } catch (error) {
-    console.error("Error:", error)
     res.status(500).json({ error: "Error fetching skills" });
   }
 });
@@ -22,6 +21,15 @@ router.get('/traits', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Error fetching traits" });
   }
+});
+
+router.get('/projects', async (req, res) => {
+    try {
+        const projects = await prisma.project.findMany();
+        res.json(projects);
+    } catch (error) {
+        res.status(500).json({ error: "Error fetching projects" });
+    }
 });
 
 export default router;
