@@ -3,21 +3,23 @@ import { CodeRow as C } from "./ui/CodeRow";
 import { Trait } from "./ui/Trait";
 import { CodeWindow } from "./ui/CodeWindow";
 import { SkillBar } from "./ui/SkillBar";
+import { useState, useEffect } from "react";
+import { getAboutData } from "../services/api"
 
 export function About() {
-    const traits = [
-        "text",
-        "text",
-        "Text",
-    ];
+    const [traits, setTraits] = useState<string[]>([]);
+    const [skills, setSkills] = useState<any[]>([]);
+    const [loading, setLoading] = useState(true);
 
-    const skills = [
-        { name: "Lorem ipsum", level: 90, color: "bg-blue-500" },
-        { name: "Lorem ipsum", level: 85, color: "bg-purple-400" },
-        { name: "Lorem ipsum", level: 80, color: "bg-green-500" },
-        { name: "Lorem ipsum", level: 95, color: "bg-cyan-500" },
-        { name: "Lorem ipsum", level: 70, color: "bg-indigo-500" },
-    ];
+    useEffect(() => {
+        getAboutData()
+            .then(data => {
+                setTraits(data.traits.map((t: any) => t.text));
+                setSkills(data.skills);
+            })
+            .catch(err => console.error("Error fetching about data:", err))
+            .finally(() => setLoading(false));
+    }, []);
 
     return (
     <section className="bg-slate-950 py-24">
@@ -95,7 +97,7 @@ export function About() {
 
                         <div className="mt-8 flex flex-wrap gap-3">
                             {traits.map((trait, index) => (
-                                <Trait key={trait} trait={trait} index={index}></Trait>
+                                <Trait key={`${trait}-${index}`} trait={trait} index={index} />
                             ))}
                         </div>
                     </motion.div>
@@ -104,7 +106,7 @@ export function About() {
                         <div className="space-y-4">
                             {skills.map((skill, index) => (
                                 <SkillBar 
-                                key={skill.name} 
+                                key={skill.id || skill.name} 
                                 skill={skill} 
                                 index={index} 
                                 />

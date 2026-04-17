@@ -1,30 +1,27 @@
 import { Router } from "express";
+import prisma from "../lib/prisma";
 
 const router = Router();
 
-// api endpoint for testing
-router.get('/about', (req, res) => {
-    res.json({ 
-        name: 'Filipe Paredes',
-        role: 'Junior Software Engineer',
-        techStack: [
-            'JavaScript', 
-            'TypeScript', 
-            'React', 'Node.js', 
-            'Express', 
-            'CSS', 
-            'HTML',
-            'Git',
-            'SQL',
-            'C',
-            'C++',
-            'C#',
-            'Java',
-            'Python',
-            'Azure'
-        ],
-        description: "Welcome to my personal portfolio!"
-     });
+// skills route
+router.get('/skills', async (req, res) => {
+  try {
+    const skills = await prisma.skill.findMany();
+    res.json(skills);
+  } catch (error) {
+    console.error("Error:", error)
+    res.status(500).json({ error: "Error fetching skills" });
+  }
+});
+
+// traits route
+router.get('/traits', async (req, res) => {
+  try {
+    const traits = await prisma.trait.findMany();
+    res.json(traits);
+  } catch (error) {
+    res.status(500).json({ error: "Error fetching traits" });
+  }
 });
 
 export default router;
