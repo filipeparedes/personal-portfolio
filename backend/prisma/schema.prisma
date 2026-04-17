@@ -6,4 +6,14 @@ datasource db {
   provider = "mongodb"
 }
 
+model Skill {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  name  String
+  level Int
+  color String //bg-blue-500
+}
 
+model Trait {
+  id    String @id @default(auto()) @map("_id") @db.ObjectId
+  text  String
+}
