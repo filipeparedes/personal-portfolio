@@ -12,13 +12,11 @@ const PER_PAGE = 3;
 
 export function Projects() {
   const [projects, setProjects] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     getProjectsData()
         .then(data => setProjects(data))
         .catch(err => console.error("Error fetching projects:", err))
-        .finally(() => setLoading(false));
   }, []);
 
   // Create a loop array by cloning the last items to the start and first items to the end
