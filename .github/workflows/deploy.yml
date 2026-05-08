@@ -1,0 +1,37 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /var/www/portfolio
+
+            # Create backend .env
+            cat > backend/.env << EOF
+            PORT=${{ secrets.PORT }}
+            DATABASE_URL=${{ secrets.DATABASE_URL }}
+            API_URL=${{ secrets.API_URL }}
+            RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}
+            MY_EMAIL=${{ vars.EMAIL }}
+            EOF
+
+            # Create frontend .env
+            cat > frontend/.env << EOF
+            VITE_API_URL=${{ secrets.VITE_API_URL }}
+            EOF
+
+            git pull
+            cd backend && npm install && npm run build
+            cd ../frontend && npm install && npm run build
+            pm2 restart portfolio-backend
