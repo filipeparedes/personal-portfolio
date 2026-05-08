@@ -9,7 +9,6 @@ import { getAboutData } from "../services/api"
 export function About() {
     const [traits, setTraits] = useState<string[]>([]);
     const [skills, setSkills] = useState<any[]>([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         getAboutData()
@@ -17,8 +16,7 @@ export function About() {
                 setTraits(data.traits.map((t: any) => t.text));
                 setSkills(data.skills);
             })
-            .catch(err => console.error("Error fetching about data:", err))
-            .finally(() => setLoading(false));
+            .catch(err => console.error("Error fetching about data:", err));
     }, []);
 
     return (
