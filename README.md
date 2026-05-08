@@ -1,4 +1,4 @@
-# filipeparedes.dev
+# Personal Portfolio
 
 Personal portfolio website built with React and Node.js, self-hosted on a home server with automated CI/CD.
 
