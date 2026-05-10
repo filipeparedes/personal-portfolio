@@ -21,7 +21,7 @@ export function Footer() {
             <C type="comment">;</C>
           </p>
           <C type="comment">
-            © 2026 Filipe Paredes | Todos os direitos reservados
+            © 2026 Filipe Paredes | All rights reserved
           </C>
         </div>
       </div>

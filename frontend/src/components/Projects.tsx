@@ -56,7 +56,7 @@ export function Projects() {
   }, [index]);
 
   return (
-    <section className="py-24 bg-slate-950 overflow-hidden">
+    <section className="py-24 bg-slate-950 overflow-hidden" id="projects">
       <div className="container mx-auto px-6">
         
         {/* Header */}
