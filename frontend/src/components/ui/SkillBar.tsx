@@ -35,7 +35,8 @@ export function SkillBar({skill, index}: SkillBarProps) {
                     ease: "circOut" 
                 }}
                 viewport={{ once: true }}
-                className={`h-full ${skill.color} rounded-full shadow-[0_0_10px_rgba(0,0,0,0.5)]`}
+                style={{ backgroundColor: skill.color }}
+                className="h-full rounded-full shadow-[0_0_10px_rgba(0,0,0,0.5)]"
                 />
             </div>
         </div>

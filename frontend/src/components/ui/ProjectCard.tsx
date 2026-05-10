@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CodeWindow } from "./CodeWindow";
+import { ExternalLink } from "lucide-react";
 
 interface ProjectCardProps {
   project: {
@@ -51,12 +52,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </div>
 
             {/* Links */}
-            <div className="flex gap-4 pt-3 border-t border-slate-800 mt-auto">
-              <a href={project.github} target="_blank" className="text-slate-400 hover:text-purple-400 transition-colors font-mono text-xs">
+            <div className="flex gap-1 pt-3 border-t border-slate-800 mt-auto">
+              <ExternalLink size={14} />
+              <a href={project.github} target="_blank" className="text-slate-400 hover:text-blue-400 transition-colors font-mono text-xs">
                 repo
-              </a>
-              <a href={project.demo} target="_blank" className="text-slate-400 hover:text-blue-400 transition-colors font-mono text-xs">
-                live
               </a>
             </div>
           </div>
