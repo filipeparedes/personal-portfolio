@@ -47,46 +47,37 @@ export function About() {
                             <div>
                             <C type="var">01.</C>
                             <h3 className="text-2xl text-white mb-3 mt-2">
-                                Lorem ipsum
+                                Who I am
                             </h3>
                             <p className="text-slate-400 leading-relaxed">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                                officia deserunt mollit anim id est laborum.
+                                Final-year Computer Engineering student based in Portugal, programming since the age of 12. 
+                                What started as curiosity turned into a genuine passion for building things that work well under 
+                                the hood, from low-level systems in C and C++ to modern backend services in C# and Python.
                             </p>
                             </div>
 
                             <div>
                             <C type="var">02.</C>
                             <h3 className="text-2xl text-white mb-3 mt-2">
-                                Lorem ipsum
+                                What I build
                             </h3>
                             <p className="text-slate-400 leading-relaxed">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
-                                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-                                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                                officia deserunt mollit anim id est laborum.
+                                I gravitate towards backend and systems work, the kind of engineering that 
+                                prioritizes performance, reliability and clean architecture. I have hands-on 
+                                experience with ASP.NET Core, distributed systems, and systems programming, and I 
+                                enjoy tackling problems that require thinking carefully about memory, performance and design.
                             </p>
                             </div>
 
                             <div>
                             <C type="var">03.</C>
                             <h3 className="text-2xl text-white mb-3 mt-2">
-                                Lorem ipsum
+                                What I'm looking for
                             </h3>
                             <p className="text-slate-400 leading-relaxed">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Ut enim a esse cillum dolore eu fugiat nulla pariatur. 
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-                                officia deserunt mollit anim id est laborum.
+                                I care more about building things that matter than just shipping code. 
+                                I'm currently looking for my first opportunity as a Backend Developer,
+                                somewhere I can contribute to real systems, keep learning, and grow as an engineer.
                             </p>
                             </div>
                         </div>

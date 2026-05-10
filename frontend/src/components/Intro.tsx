@@ -15,9 +15,15 @@ export function Intro() {
                 <CodeWindow title="~/portfolio/intro.tsx">
                 <div><C type="keyword">const</C> <C type="var">developer</C><C type="punct"> {`= {`} </C></div>
                 <div><C type="var">name</C><C type="punct">:</C> <C type="string">"Filipe Paredes"</C><C type="punct">,</C></div>
-                <div><C type="var">role</C><C type="punct">:</C> <C type="string">"Junior Software Engineer"</C><C type="punct">,</C></div>
-                <div><C type="var">skills</C><C type="punct">:</C> <C type="punct">{`[`}</C><C type="string">"React"</C><C type="punct">, </C><C type="string">"TypeScript"</C><C type="punct">{`],`}</C></div>
-                <div><C type="var">passion</C><C type="punct">:</C> <C type="string">"Turning ideas into projects"</C><C type="punct">,</C></div>
+                <div><C type="var">role</C><C type="punct">:</C> <C type="string">"Junior Backend Engineer"</C><C type="punct">,</C></div>
+                <div><C type="var">skills</C><C type="punct">:</C> 
+                    <C type="punct">{`[`}</C>
+                    <C type="string">"C/C++"</C><C type="punct">,</C>
+                    <C type="string">"C#"</C><C type="punct">,</C> 
+                    <C type="string">"Python"</C><C type="punct">,</C> 
+                    <C type="string">"SQL"</C>
+                    <C type="punct">{`],`}</C></div>
+                <div><C type="var">passion</C><C type="punct">:</C> <C type="string">"Code with purpose"</C><C type="punct">,</C></div>
                 <div><C type="var">status</C><C type="punct">:</C> <C type="string">"Open to Work/Projects"</C><C type="punct">,</C></div>
                 <div><C type="punct"> {`};`} </C></div>
                 <br></br>
@@ -49,7 +55,7 @@ export function Intro() {
                         <C type="punct">{"<h1>"}</C>
 
                         <p className="text-xl md:text-2xl text-slate-400 mb-8 mt-6">
-                            <span className="text-blue-400 font-mono">$</span> Software Engineer searching to create amazing digital experiences
+                            <span className="text-blue-400 font-mono">$</span> I write code. Sometimes it even works.
                         </p>
                         <div className="flex flex-wrap gap-4">
                         <a href="#projects">

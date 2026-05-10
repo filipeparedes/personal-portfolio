@@ -43,19 +43,27 @@ export function Contact() {
                 <C type="punct" size="lg">;</C>
               </div>
               <p className="text-slate-400 leading-relaxed text-lg max-w-md">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Whether you have a project in mind, an opportunity to share, 
+                or just want to talk tech, feel free to reach out.
               </p>
             </div>
 
             <div className="space-y-3 font-mono text-sm text-slate-500">
               <div className="flex gap-2">
                 <span className="text-blue-500">→</span>
-                <span>Lorem ipsum</span>
+                <span>Freelance projects & collaborations</span>
               </div>
               <div className="flex gap-2">
                 <span className="text-blue-500">→</span>
-                <span>Lorem ipsum</span>
+                <span>Internships & junior opportunities</span>
+              </div>
+              <div className="flex gap-2">
+                <span className="text-blue-500">→</span>
+                <span>Constructive feedback & honest conversations</span>
+              </div>
+              <div className="flex gap-2">
+                <span className="text-blue-500">→</span>
+                <span>Networking & knowledge sharing</span>
               </div>
             </div>
             <button
