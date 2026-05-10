@@ -34,7 +34,7 @@ export function SectionDivider({ command }: SectionDividerProps) {
           <motion.span
             animate={{ opacity: [1, 0] }}
             transition={{ duration: 0.8, repeat: Infinity, ease: steps(2) }}
-            className="inline-block w-2 h-4 bg-purple-500 ml-1 translate-y-0.5"
+            className="inline-block w-2 h-4 bg-slate-400 ml-1 translate-y-0.5"
           />
         </div>
       </motion.div>

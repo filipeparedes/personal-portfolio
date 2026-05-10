@@ -49,11 +49,15 @@ export function Intro() {
                         <C type="punct">{"<h1>"}</C>
 
                         <p className="text-xl md:text-2xl text-slate-400 mb-8 mt-6">
-                        <span className="text-blue-400 font-mono">$</span> Software Engineer searching to create amazing digital experiences
+                            <span className="text-blue-400 font-mono">$</span> Software Engineer searching to create amazing digital experiences
                         </p>
                         <div className="flex flex-wrap gap-4">
-                        <Button color="purple"><Terminal className="w-5 h-5"/>Projects</Button>
-                        <Button color="slate">Contact <ArrowDown className="w-4 h-4" /></Button>
+                        <a href="#projects">
+                            <Button><Terminal className="w-5 h-5"/>Projects</Button>
+                        </a>
+                        <a href="#contact">
+                            <Button color="slate">Contact<ArrowDown className="w-4 h-4" /></Button>
+                        </a>
                         </div>
                 </motion.div>
             </div>

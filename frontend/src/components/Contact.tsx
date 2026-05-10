@@ -11,7 +11,7 @@ export function Contact() {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section className="py-32 bg-slate-950 relative">
+    <section className="py-32 bg-slate-950 relative" id="contact">
       <div className="container mx-auto px-6">
         {/* Header */}
         <motion.div
@@ -50,17 +50,17 @@ export function Contact() {
 
             <div className="space-y-3 font-mono text-sm text-slate-500">
               <div className="flex gap-2">
-                <span className="text-purple-500">→</span>
+                <span className="text-blue-500">→</span>
                 <span>Lorem ipsum</span>
               </div>
               <div className="flex gap-2">
-                <span className="text-purple-500">→</span>
+                <span className="text-blue-500">→</span>
                 <span>Lorem ipsum</span>
               </div>
             </div>
             <button
               onClick={() => setModalOpen(true)}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-purple-600 text-white rounded border border-purple-500/50 hover:bg-purple-700 transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] font-mono group cursor-pointer"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-500 shadow-blue-500/20 text-white rounded-lg border border-slate-700 transition-all hover:shadow-[0_0_20px_rgba(168,85,247,0.4)] font-mono group cursor-pointer"
             >
               Send Message
               <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
@@ -70,7 +70,7 @@ export function Contact() {
         </div>
       </div>
 
-      <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />  {/* 👈 faltava isto */}
+      <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 }
